@@ -1,12 +1,23 @@
+#ifndef MATRIZ_H
+#define MATRIZ_H
 
 class Matriz{
+
     public:
+        Matriz();
         Matriz(int, int);
-        Matriz multiplicar(Matriz *, Matriz * );
-        Matriz suma(Matriz *, Matriz *);
-        Matriz escalar(Matriz * );
-        double ProductoPunto(Matriz *, Matriz * );
+        void llenar_matriz(int , int);
+        void mostrar_matriz(Matriz );
+        Matriz multiplicar(Matriz, Matriz);
+        int getfila();
+        int getcolumna();
+
 
     private:
-        double fila,columna;
+        int fila, columna;
+        double **elemento;
+        void asignarElemento();
+
 };
+
+#endif
