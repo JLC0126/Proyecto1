@@ -2,22 +2,24 @@
 #define MATRIZ_H
 
 class Matriz{
+    //____Sobrecargando operadores (+,-,*)__________
+
+    friend Matriz &operator*(const Matriz &, const Matriz &);
+    friend Matriz &operator+(const Matriz &, const Matriz &);
+    friend Matriz &operator-(const Matriz &, const Matriz &);
+
 
     public:
-        Matriz();
-        Matriz(int, int);
-        void llenar_matriz(int , int);
-        void mostrar_matriz(Matriz );
-        Matriz multiplicar(Matriz, Matriz);
-        int getfila();
-        int getcolumna();
+        Matriz();//ctor por defecto matriz1.mostrar_matriz()
+        Matriz(int, int);//ctor por parametros
+        void llenar_matriz();
+        void mostrar_matriz();
+        //Matriz multiplicar(Matriz , Matriz);
 
 
     private:
         int fila, columna;
-        double **elemento;
-        void asignarElemento();
-
+        int **elemento;
 };
 
 #endif
