@@ -4,9 +4,10 @@
 class Matriz{
     //____Sobrecargando operadores (+,-,*)__________
 
-    friend Matriz &operator*(const Matriz &, const Matriz &);
+    friend Matriz &operator*(const Matriz &, const Matriz &);//producto matricial
     friend Matriz &operator+(const Matriz &, const Matriz &);
     friend Matriz &operator-(const Matriz &, const Matriz &);
+    friend Matriz &operator*( const int &, const Matriz &); //producto por escalar
 
 
     public:
@@ -14,7 +15,6 @@ class Matriz{
         Matriz(int, int);//ctor por parametros
         void llenar_matriz();
         void mostrar_matriz();
-        //Matriz multiplicar(Matriz , Matriz);
 
 
     private:

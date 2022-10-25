@@ -58,8 +58,8 @@ Matriz &operator*(const Matriz &m1, const Matriz &m2){
         c=m2.columna;
     }
     else{
-        cout<<"No se pueden multiplicar las matrices, la dimension de la fila del primer objeto ";
-        cout<<"tiene que ser igual a la dimension de la columna del segundo objeto"<<endl;
+        cout<<"No se pueden multiplicar las matrices, la dimension de la columna del primer objeto ";
+        cout<<"tiene que ser igual a la dimension de la fila del segundo objeto"<<endl;
     }
 
     Matriz *mResp = new Matriz(f,c);
@@ -124,4 +124,22 @@ Matriz &operator-(const Matriz &m1, const Matriz &m2){
     cout<<endl;
 
     return *mResta;
+}
+
+Matriz &operator*(const int &escalar,const Matriz &m){
+    int fil;
+    int col;
+    fil=m.fila;
+    col=m.columna;
+
+    Matriz *RespEscalar = new Matriz(fil,col);
+
+    for(int i=0;i<fil;i++){
+        for(int j=0;j<col;j++){
+            RespEscalar->elemento[i][j] = (escalar)*(m.elemento[i][j]);
+        }
+    }
+    cout<<endl;
+
+    return *RespEscalar;
 }

@@ -20,10 +20,20 @@ int main(){
     cout<<endl;
 
 
-    cout<<"Multiplicando matriz1 con matriz2: "<<endl;
+    /*cout<<"Multiplicando matriz1 con matriz2: "<<endl;
 
     auto inicio = high_resolution_clock::now();
-    matrizResultado= matriz1 - matriz2;
+    matrizResultado= matriz1 * matriz2;
+    auto final = high_resolution_clock::now();
+    auto duration = duration_cast<microseconds>(final - inicio);
+    cout<<"Tiempo de ejecucion del calculo mult es:" <<duration.count()<<" mcs"<<endl;
+    
+    matrizResultado.mostrar_matriz();*/
+
+    cout<<"Multiplicando escalar con matriz: "<<endl;
+
+    auto inicio = high_resolution_clock::now();
+    matrizResultado= 2 * matriz2;
     auto final = high_resolution_clock::now();
     auto duration = duration_cast<microseconds>(final - inicio);
     cout<<"Tiempo de ejecucion del calculo mult es:" <<duration.count()<<" mcs"<<endl;
